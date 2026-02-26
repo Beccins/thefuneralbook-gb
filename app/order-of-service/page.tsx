@@ -108,6 +108,13 @@ praising my Savior all the day long.`
     type: "general",
   },
   {
+    id: "memorial-video",
+    title: "Watch Gary's Memorial Video",
+    subtitle: "A tribute to Gary Robert Beaumont",
+    time: "unknown",
+    type: "general",
+},
+  {
     id: "song-3",
     title: "Song",
     subtitle: "It is well with my soul",
