@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, MapPin, Clock, Calendar, Play, ChevronDown, ChevronUp, Music, BookOpen, Mic } from "lucide-react"
 import { useState } from "react"
- 
+
 interface ServiceItem {
   id: string
   title: string
@@ -14,95 +14,96 @@ interface ServiceItem {
   time: string
   type: "hymn" | "prayer" | "tribute" | "general"
   content?: string
+  spotifyId?: string
   audioUrl?: string
 }
 
 const serviceItems: ServiceItem[] = [
   {
     id: "welcome",
-    title: "Welcome and prayer",
-    subtitle: "Stephen Bates",
-    time: "unknown",
-    type: "general",
-  },
-  {
-    id: "Scripture Reading",
-    title: "Scripture reading - 1 Peter chapter 1:3-9",
-    subtitle: "Caitlyn Munns",
+    title: "Welcome",
+    subtitle: "Pastor Glenn Stanley",
     time: "unknown",
     type: "general",
   },
   {
     id: "song",
     title: "Song",
-    subtitle: "How Great Thou Art",
+    subtitle: "When the Roll is Called Up Yonder",
     time: "unknown",
     type: "hymn",
-    content: `O Lord my God
-When I in awesome wonder 
-Consider all the worlds
-Thy hands have made, 
-I see the stars,
-I hear the rolling thunder, 
-Thy pow'r throughout The universe displayed!
+    content: `1 When the trumpet of the Lord shall sound and time shall be no more,
+And the morning breaks, eternal, bright and fair;
+When the saved of earth shall gather over on the other shore,
+And the roll is called up yonder, I'll be there.
 
-Chorus:
-Then sings my soul,
-My Saviour God, to Thee; 
-How great Thou art, 
-How great Thou art!
-Then sings my soul,
-My Saviour God, to Thee;
-How great Thou art,
-How great Thou art!
- 
-And when I think
-That God, His Son not sparing, 
-Sent Him to die,
-I scarce can take it in - 
-That on the cross,
-My burden gladly bearing, He bled and died
-To take away my sin!
+Refrain:
+When the roll is called up yonder,
+When the roll is called up yonder,
+When the roll is called up yonder,
+When the roll is called up yonder, I'll be there.
 
-Chorus
+2 On that bright and cloudless morning when the dead in Christ shall rise,
+And the glory of his resurrection share;
+When his chosen ones shall gather to their home beyond the skies,
+And the roll is called up yonder, I'll be there. [Refrain]
 
-When Christ shall come 
-With shout of acclamation 
-And take me home,
-What joy shall fill my heart! 
-Then I shall bow
-In humble adoration
-And there proclaim,
-My God, how great Thou art!
- 
-Chorus`,
+3 Let us labor for the Master from the dawn till setting sun;
+Let us talk of all his wondrous love and care.
+Then when all of life is over and our work on earth is done,
+And the roll is called up yonder, I'll be there. [Refrain]`
+  },
+
+  {
+    id: "bible-reading",
+    title: "Bible Reading",
+    subtitle: "Psalm 119: 9-16 - Larry Ransley",
+    time: "unknown",
+    type: "prayer",
+    content: `How can a young person stay on the path of purity
+by living according to your word I seek you with all my heart
+do not let me stray from your commands
+I have hidden your word in my heart
+that I might not sin against you
+praise be to you Lord
+teach me your decrees
+with my lips I recount
+all the laws that come from your mouth
+I rejoice in following your statutes
+as one rejoices in great riches
+I meditate on your precepts
+and I consider your ways
+I delight in your decrees
+I will not neglect your word`,
   },
   {
-    id: "Memories shared of Maureen",
-    title: "Memories shared of Maureen",
-    subtitle: "Phil, Janine & Ian. Phil reads poem - More of Mor",
-    time: "unknown",
-    type: "tribute",
-    audioUrl: "/Phil Munns reads poem - More of Mor.m4a",
-  },
-   {
-    id: "Memories shared of Maureen",
-    title: "Memories shared of Maureen",
-    subtitle: "Melinda Lumb shares memories of Aunty Maureen",
-    time: "unknown",
-    type: "tribute",
-  },
-  {
-    id: "Scripture Reading",
-    title: "Scripture reading - Matthew chapter 25:14-30",
-    subtitle: "Ashlyn Orpen",
+    id: "eulogy",
+    title: "Eulogy",
+    subtitle: "Read by Pastor Judy Stanley",
     time: "unknown",
     type: "general",
   },
   {
-    id: "Message",
-    title: "Message",
-    subtitle: "Kathy Bates",
+    id: "song-2",
+    title: "Song",
+    subtitle: "Blessed Assurance",
+    time: "unknown",
+    type: "hymn",
+    content: `1 Blessed assurance, Jesus is mine!
+Oh, what a foretaste of glory divine!
+Heir of salvation, purchase of God,
+born of his Spirit, washed in his blood.
+
+Refrain:
+This is my story, this is my song,
+praising my Savior all the day long.
+This is my story, this is my song,
+praising my Savior all the day long.`
+  },
+  {
+    id: "sharing-memories",
+    title: "Sharing Memories of Gary",
+    subtitle: "Pastor Glenn Stanley",
     time: "unknown",
     type: "general",
   },
@@ -112,88 +113,77 @@ Chorus`,
     subtitle: "It is well with my soul",
     time: "unknown",
     type: "hymn",
-    content: `When peace, like a river, 
-attendeth my way,
+    content: `When peace, like a river, attendeth my way,
 When sorrows like sea billows roll;
 Whatever my lot, Thou hast taught me to say,
 It is well, it is well with my soul.
 
 Refrain:
-It is well (it is well) with my soul (with my soul),
+It is well with my soul,
 It is well, it is well with my soul.
 
-Though Satan should buffet, 
-though trials should come,
+Though Satan should buffet, though trials should come,
 Let this blest assurance control,
-That Christ has regarded my helpless estate,
-And has shed His own blood for my soul.
+That Christ hath regarded my helpless estate,
+And hath shed His own blood for my soul.
 
-Refrain
-
-My sin—oh, the bliss of this 
-glorious thought!—
+My sin—oh, the bliss of this glorious thought!—
 My sin, not in part but the whole,
 Is nailed to the cross, and I bear it no more,
 Praise the Lord, praise the Lord, O my soul!
 
-Refrain
+For me, be it Christ, be it Christ hence to live:
+If Jordan above me shall roll,
+No pang shall be mine, for in death as in life
+Thou wilt whisper Thy peace to my soul.
 
-And Lord, haste the day when the 
-faith shall be sight,
+But, Lord, ’tis for Thee, for Thy coming we wait,
+The sky, not the grave, is our goal;
+Oh, trump of the angel! Oh, voice of the Lord!
+Blessed hope, blessed rest of my soul!
+
+And Lord, haste the day when the faith shall be sight,
 The clouds be rolled back as a scroll;
-The trump shall resound, and the 
-Lord shall descend,
-Even so, it is well with my soul.
-
-Refrain`,
-  },
-  {
-    id: "Prayer for the family",
-    title: "Prayer for the family",
-    subtitle: "Jordon Taylor",
-    time: "unknown",
-    type: "general",
+The trump shall resound, and the Lord shall descend,
+Even so, it is well with my soul.`
   },
   {
     id: "benediction",
     title: "Benediction",
-    subtitle: "Joshua Taylor",
+    subtitle: "Pastor Glenn Stanley",
     time: "unknown",
     type: "general",
   },
 ]
 
 function InteractiveServiceItem({ item }: { item: ServiceItem }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [showSpotifyEmbed, setShowSpotifyEmbed] = useState(false) // Added state for Spotify embed visibility
 
   const getIcon = () => {
     switch (item.type) {
       case "hymn":
-        return <Music className="w-4 h-4" />;
+        return <Music className="w-4 h-4" />
       case "prayer":
-        return <BookOpen className="w-4 h-4" />;
+        return <BookOpen className="w-4 h-4" />
       case "tribute":
-        return <Mic className="w-4 h-4" />;
+        return <Mic className="w-4 h-4" />
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   const handlePlay = () => {
-    if (item.type === "tribute" && item.audioUrl) {
-      const audio = new Audio(item.audioUrl);
-      if (isPlaying) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-      setIsPlaying(!isPlaying);
+    if (item.type === "hymn" && item.spotifyId) {
+      setShowSpotifyEmbed(!showSpotifyEmbed) // Toggle Spotify embed instead of opening new window
+    } else if (item.type === "tribute" && item.audioUrl) {
+      setIsPlaying(!isPlaying)
     }
-  };
+  }
 
-  const canExpand = (item.type === "prayer" && item.content) || (item.type === "hymn" && item.content);
-  const canPlay = (item.type === "tribute" && item.audioUrl);
+  const canExpand =( item.type === "prayer" && item.content) || (item.type === "hymn" && item.content)
+  const canPlay = (item.type === "hymn" && item.spotifyId) || (item.type === "tribute" && item.audioUrl)
 
   return (
     <div className="border-b border-border pb-3 last:border-b-0">
@@ -229,11 +219,26 @@ function InteractiveServiceItem({ item }: { item: ServiceItem }) {
               <p className="text-foreground text-sm leading-relaxed whitespace-pre-line">{item.content}</p>
             </div>
           )}
+          {showSpotifyEmbed && item.type === "hymn" && item.spotifyId && (
+            <div className="mt-3">
+              <iframe
+                data-testid="embed-iframe"
+                style={{ borderRadius: "12px" }}
+                src={`https://open.spotify.com/embed/track/${item.spotifyId}?utm_source=generator`}
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
         <span className="text-muted-foreground text-sm ml-4">{item.time}</span>
       </div>
     </div>
-  );
+  )
 }
 
 export default function OrderOfServicePage() {
@@ -258,8 +263,8 @@ export default function OrderOfServicePage() {
         <div className="max-w-4xl mx-auto space-y-8">
           <Card className="bg-card border-border">
             <CardHeader className="text-center pb-4">
-              <CardTitle className="text-3xl font-bold text-foreground mb-4">Order of Service</CardTitle>
-              <h2 className="text-2xl text-foreground mb-2">Maureen (Mor) Munns</h2>
+              <CardTitle className="text-3xl font-bold text-foreground mb-4">Celebration of Life</CardTitle>
+              <h2 className="text-2xl text-foreground mb-2">Gary Robert Beaumont</h2>
             </CardHeader>
           </Card>
 
@@ -268,7 +273,7 @@ export default function OrderOfServicePage() {
               <CardContent className="p-6 text-center">
                 <Calendar className="w-8 h-8 mx-auto mb-3 text-primary" />
                 <h3 className="font-semibold text-foreground mb-2">Date</h3>
-                <p className="text-muted-foreground">Friday, 6th February, 2026</p>
+                <p className="text-muted-foreground">Tuesday, 26th of March, 2024</p>
               </CardContent>
             </Card>
 
@@ -276,7 +281,7 @@ export default function OrderOfServicePage() {
               <CardContent className="p-6 text-center">
                 <Clock className="w-8 h-8 mx-auto mb-3 text-primary" />
                 <h3 className="font-semibold text-foreground mb-2">Time</h3>
-                <p className="text-muted-foreground">1:30 PM</p>
+                <p className="text-muted-foreground">11:00 AM</p>
               </CardContent>
             </Card>
 
@@ -285,16 +290,16 @@ export default function OrderOfServicePage() {
                 <MapPin className="w-8 h-8 mx-auto mb-3 text-primary" />
                 <h3 className="font-semibold text-foreground mb-2">Location</h3>
                 <a
-                  href="https://www.google.com/maps/place/Parramatta+Baptist+Church/@-33.7891197,150.988575,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12a25722886781:0x7d79e080732b9c08!8m2!3d-33.7891197!4d150.9911499!16s%2Fg%2F1q5brt9z6?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://maps.app.goo.gl/NoevFPoF6r64iyNo6" // TODO check if this is right
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground text-pretty hover:text-primary transition-colors cursor-pointer underline decoration-dotted underline-offset-4"
                 >
-                  Parramatta Baptist Church
+                  Hills Community Church of the Nazarene Kenthurst
                   <br />
-                  84-94 Kleins Road
+                  87 Kenthurst Rd
                   <br />
-                  Northmead, NSW, 2152
+                  Kenthurst, NSW, 2156
                 </a>
               </CardContent>
             </Card>
@@ -304,7 +309,7 @@ export default function OrderOfServicePage() {
             <CardHeader>
               <CardTitle className="text-xl text-foreground text-center">Service Program</CardTitle>
               <p className="text-sm text-muted-foreground text-center mt-2">
-                Click the icons to play audio or expand hymn lyrics
+                Click the icons to play hymns, expand prayers, or listen to tributes
               </p>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -317,14 +322,15 @@ export default function OrderOfServicePage() {
           <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
             <Card className="bg-card border-border">
               <CardHeader>
-                <CardTitle className="text-lg text-foreground">Officiant</CardTitle>
+                <CardTitle className="text-lg text-foreground">Officiant</CardTitle /* TODO check correct */>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  <p className="font-semibold text-foreground">Stephen Bates</p>
+                  <p className="font-semibold text-foreground">Pastor Glenn Stanley</p>
                 </div>
               </CardContent>
             </Card>
+
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -342,11 +348,14 @@ export default function OrderOfServicePage() {
         </div>
       </main>
 
+    
+      {/* Footer */}
       <footer className="border-t border-border bg-muted mt-16">
         <div className="container mx-auto px-4 py-8 text-center">
+          
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/bessie_logo_final.png"
                 alt="The Funeral Book"
@@ -364,7 +373,7 @@ export default function OrderOfServicePage() {
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>

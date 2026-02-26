@@ -82,7 +82,6 @@ export default function AddMemoriesPage() {
       media: [
         { type: "image", url: "/08_Gary in Cadets.jpg", title: "Gary in Cadets" },
         { type: "image", url: "02_Gary_11ish_with family.jpg", title: "Gary with Family" },
-        { type: "video", url: "https://streamable.com/axzalj", title: "video of pictures"},
       ],
       date: "submission date",
       timeframe: "memory date",
@@ -237,11 +236,11 @@ export default function AddMemoriesPage() {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl text-foreground mb-2 flex items-center justify-center gap-2">
                 <Camera className="w-6 h-6 text-primary" />
-                Celebrate Maureen's Life
+                Celebrate Gary's Life
               </CardTitle>
               <p className="text-muted-foreground text-pretty">
-                Share your favorite photos and memories of Mor. These precious moments will create a lasting
-                tribute to her beautiful life and the joy she brought to so many people.
+                Share your favorite photos and memories of Gary. These precious moments will create a lasting
+                tribute to her beautiful life and the joy he brought to so many people.
               </p>
             </CardHeader>
           </Card>
@@ -272,7 +271,7 @@ export default function AddMemoriesPage() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="memory-relationship" className="text-foreground">
-                      Relationship to Maureen
+                      Relationship to Gary
                     </Label>
                     <Input
                       id="memory-relationship"
@@ -341,7 +340,7 @@ export default function AddMemoriesPage() {
                     id="memory-description"
                     value={memoryForm.description}
                     onChange={(e) => setMemoryForm((prev) => ({ ...prev, description: e.target.value }))}
-                    placeholder="Tell us about this special moment with Maureen..."
+                    placeholder="Tell us about this special moment with Gary..."
                     rows={4}
                     required
                     className="bg-input border-border resize-none"
@@ -710,7 +709,7 @@ export default function AddMemoriesPage() {
           
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/funeral-book-logo.webp"
                 alt="The Funeral Book"
@@ -728,7 +727,7 @@ export default function AddMemoriesPage() {
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>

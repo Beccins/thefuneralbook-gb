@@ -88,7 +88,7 @@ export default function LeaveMessagePage() {
               <CardTitle className="text-2xl text-foreground mb-2">Share Your Memories</CardTitle>
               <p className="text-muted-foreground text-pretty">
                 Your words of comfort and cherished memories mean so much to the family during this difficult time.
-                Please share your thoughts about Maureen and how she touched your life.
+                Please share your thoughts about Gary and how he touched your life.
               </p>
             </CardHeader>
           </Card>
@@ -119,13 +119,13 @@ export default function LeaveMessagePage() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="relationship" className="text-foreground">
-                      Relationship to Maureen
+                      Relationship to Gary
                     </Label>
                     <Input
                       id="relationship"
                       value={formData.relationship}
                       onChange={(e) => handleInputChange("relationship", e.target.value)}
-                      placeholder="e.g., Family, Friend, Neighbor, Colleague"
+                      placeholder="e.g., Friend, Neighbor, Colleague"
                       className="bg-input border-border"
                     />
                   </div>
@@ -138,7 +138,7 @@ export default function LeaveMessagePage() {
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
-                    placeholder="Share your memories, condolences, or thoughts about Maureen..."
+                    placeholder="Share your memories, condolences, or thoughts about Gary..."
                     rows={6}
                     required
                     className="bg-input border-border resize-none"
@@ -202,7 +202,7 @@ export default function LeaveMessagePage() {
           
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/bessie_logo_final.png"
                 alt="The Funeral Book"
@@ -220,7 +220,7 @@ export default function LeaveMessagePage() {
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>

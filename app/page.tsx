@@ -17,18 +17,8 @@ export default function MemorialHomepage() {
                 height={60}
                 className="object-contain"
               />
-               <div className="h-8 w-px bg-border"></div>
+              <div className="h-8 w-px bg-border"></div>
               <h1 className="text-2xl font-bold text-foreground">Digital Memorial Services</h1>
-              <div className="h-8 w-px bg-border"></div>
-               <Image
-                src="Hills family funerals logo.png"
-                alt="Hills Family Funerals"
-                width={120}
-                height={60}
-                className="object-contain"
-              />
-              <div className="h-8 w-px bg-border"></div>
-             
             </div>
           </div>
         </div>
@@ -44,7 +34,7 @@ export default function MemorialHomepage() {
               <div className="mb-8">
                 <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-muted">
                   <Image
-                    src="Mor Munns funeral book cover image.jpg"
+                    src="/GARY 2010.jpg"
                     alt="Memorial portrait"
                     fill
                     className="object-cover"
@@ -54,10 +44,10 @@ export default function MemorialHomepage() {
 
               {/* Memorial Information */}
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold text-foreground text-balance">Maureen 'Mor' Munns</h2>
+                <h2 className="text-4xl font-bold text-foreground text-balance">Gary Robert Beaumont</h2>
 
                 <div className="text-xl text-muted-foreground space-y-2">
-                  <p>15th March, 1938 - 25th January, 2026</p>
+                  <p>14th January, 1947 - 18th March, 2024</p>
                   <p className="text-2xl font-semibold text-foreground italic">In Loving Memory</p>
                 </div>
 
@@ -90,7 +80,7 @@ export default function MemorialHomepage() {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Order of Service</h3>
                     <p className="text-muted-foreground text-pretty">
-                      View the complete thanksgiving service program and schedule
+                      View the complete funeral service program and schedule
                     </p>
                   </div>
                 </CardContent>
@@ -150,7 +140,7 @@ export default function MemorialHomepage() {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Legacy</h3>
                     <p className="text-muted-foreground text-pretty">
-                      Make a charitable donation in memory of Maureen
+                      Make a charitable donation in memory of Gary
                     </p>
                   </div>
                 </CardContent>
@@ -210,7 +200,7 @@ export default function MemorialHomepage() {
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Add Memories</h3>
                     <p className="text-muted-foreground mb-4 text-pretty">
-                      Share photos and stories to celebrate Maureen's life
+                      Share photos and stories to celebrate Gary's life
                     </p>
                   </div>
                 </CardContent>
@@ -257,7 +247,7 @@ export default function MemorialHomepage() {
           
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/bessie_logo_final.png"
                 alt="The Funeral Book"
@@ -270,12 +260,12 @@ export default function MemorialHomepage() {
           <p className="text-xs text-muted-foreground/70 mt-2">
             Created by{" "}
             <a
-              href="https://github.com/Beccins"
+              href="https://github.com/afishydeath"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>

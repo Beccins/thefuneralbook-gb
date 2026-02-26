@@ -39,20 +39,20 @@ export default function DonationsPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // In a real application, this would process the donation
-    alert("Thank you for your generous donation in memory of Maureen. The family has been notified of your kindness.")
+    alert("Thank you for your generous donation in memory of Gary. The family has been notified of your kindness.")
   }
 
   const shareToFacebook = () => {
     const url = encodeURIComponent(window.location.href)
     const text = encodeURIComponent(
-      `Honor Maureen's memory by making a donation to causes she cared about. Help continue her legacy of giving and community service.`,
+      `Honor Gary's memory by making a donation to causes he cared about. Help continue his legacy of giving and community service.`,
     )
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, "_blank")
   }
 
   const shareToInstagram = () => {
     // Instagram doesn't have direct URL sharing, so we copy text to clipboard
-    const text = `Honor Maureen's memory by making a donation to causes she cared about. Help continue her legacy of giving and community service. ${window.location.href}`
+    const text = `Honor Gary's memory by making a donation to causes he cared about. Help continue his legacy of giving and community service. ${window.location.href}`
     navigator.clipboard.writeText(text)
     alert("Link copied to clipboard! You can now paste it in your Instagram story or post.")
   }
@@ -69,7 +69,7 @@ export default function DonationsPage() {
                 Back to Memorial
               </Button>
             </Link>
-            <h1 className="text-2xl font-bold text-foreground">Donations</h1>
+            <h1 className="text-2xl font-bold text-foreground">Legacy</h1>
             <div className="w-32"></div> {/* Spacer for centering */}
           </div>
         </div>
@@ -82,11 +82,11 @@ export default function DonationsPage() {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl text-foreground mb-2 flex items-center justify-center gap-2">
                 <Heart className="w-6 h-6 text-primary" />
-                Honor Maureen's Memory
+                Honor Gary's Memory
               </CardTitle>
               <p className="text-muted-foreground text-pretty">
                 In lieu of flowers, the family requests donations be made to one of the following organizations that
-                were dear to Maureen's heart. Your generosity will continue her legacy of giving and community service.
+                were dear to Gary's heart. Your generosity will continue his legacy of giving and community service.
               </p>
             </CardHeader>
           </Card>
@@ -96,7 +96,7 @@ export default function DonationsPage() {
             <CardHeader>
               <CardTitle className="text-xl text-foreground">Choose a Charity</CardTitle>
               <p className="text-muted-foreground">
-                Select an organization that Maureen supported during her lifetime.
+                Select an organization that Gary supported during his lifetime.
               </p>
             </CardHeader>
             <CardContent>
@@ -216,7 +216,7 @@ export default function DonationsPage() {
                     id="donor-message"
                     value={donorInfo.message}
                     onChange={(e) => setDonorInfo((prev) => ({ ...prev, message: e.target.value }))}
-                    placeholder="Share a message about Maureen or your donation..."
+                    placeholder="Share a message about Gary or your donation..."
                     rows={4}
                     className="bg-input border-border resize-none"
                   />
@@ -261,11 +261,11 @@ export default function DonationsPage() {
             <CardHeader>
               <CardTitle className="text-xl text-foreground flex items-center gap-2">
                 <Share2 className="w-5 h-5 text-primary" />
-                Share Maureen's Legacy
+                Share Gary's Legacy
               </CardTitle>
               <p className="text-muted-foreground">
-                Help spread the word about Maureen's memorial donations and encourage others to contribute to causes
-                she loved.
+                Help spread the word about Gary's memorial donations and encourage others to contribute to causes
+                he loved.
               </p>
             </CardHeader>
             <CardContent>
@@ -311,7 +311,7 @@ export default function DonationsPage() {
           
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/bessie_logo_final.png"
                 alt="The Funeral Book"
@@ -329,7 +329,7 @@ export default function DonationsPage() {
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>

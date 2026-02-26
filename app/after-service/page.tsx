@@ -1,10 +1,8 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, MapPin, Clock, Users, Info } from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Users, Car, Phone, Info } from "lucide-react"
 
 export default function AfterServicePage() {
   return (
@@ -20,21 +18,20 @@ export default function AfterServicePage() {
               </Button>
             </Link>
             <h1 className="text-2xl font-bold text-foreground">After Service Information</h1>
-            <div className="w-32"></div>
+            <div className="w-32"></div> {/* Spacer for centering */}
           </div>
         </div>
       </header>
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto space-y-8">
-
           {/* Page Header */}
           <Card className="bg-card border-border">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl text-foreground mb-2">Reception & Gathering Details</CardTitle>
               <p className="text-muted-foreground text-pretty">
-                Following the service, family and friends are invited to join us for a thanksgiving reception to continue sharing
-                memories and celebrating Mor's life together.
+                Following the service, family and friends are invited to join us for a reception to continue sharing
+                memories and celebrating Gary's life together.
               </p>
             </CardHeader>
           </Card>
@@ -58,15 +55,7 @@ export default function AfterServicePage() {
                   <MapPin className="w-8 h-8 mx-auto mb-3 text-primary" />
                   <h3 className="font-semibold text-foreground mb-2">Location</h3>
                   <p className="text-muted-foreground text-pretty">
-                    In the church foyer,{" "}
-                    <a
-                      href="https://www.google.com/maps/place/Parramatta+Baptist+Church/@-33.7891197,150.988575,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12a25722886781:0x7d79e080732b9c08!8m2!3d-33.7891197!4d150.9911499!16s%2Fg%2F1q5brt9z6?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground text-pretty hover:text-primary transition-colors cursor-pointer underline decoration-dotted underline-offset-4"
-                    >
-                      Parramatta Baptist Church
-                    </a>
+                    In the church grounds of Hills Community Church of the Nazarene Kenthurst
                   </p>
                 </div>
               </div>
@@ -76,7 +65,7 @@ export default function AfterServicePage() {
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Light refreshments and beverages will be served</li>
                   <li>• Opportunity to share stories and memories with family</li>
-                  <li>• Photo displays of Mor's life will be available for viewing</li>
+                  <li>• Photo displays of Gary's life will be available for viewing</li>
                   <li>• Guest book for additional messages and signatures</li>
                 </ul>
               </div>
@@ -93,7 +82,7 @@ export default function AfterServicePage() {
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Private Family Service</h4>
                   <p className="text-muted-foreground text-pretty">
-                    A private interment service for immediate family will be held at Castlebrook Memorial Park Garden Chapel Rouse Hill at 11am
+                    A private interment service for immediate family will be held at Castlebrook Memorial Park Garden Chapel Rouse Hill at 9am
                   </p>
                 </div>
                 <div>
@@ -106,6 +95,7 @@ export default function AfterServicePage() {
             </CardContent>
           </Card>
 
+          
           {/* Important Information */}
           <Card className="bg-muted border-border">
             <CardHeader>
@@ -119,7 +109,7 @@ export default function AfterServicePage() {
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Dress Code</h4>
                   <p className="text-muted-foreground text-pretty">
-                    Business casual or semi-formal attire is appropriate. Maureen loved colors, so please don't
+                    Business casual or semi-formal attire is appropriate. Margaret loved bright colors, so please don't
                     feel limited to traditional black.
                   </p>
                 </div>
@@ -147,6 +137,7 @@ export default function AfterServicePage() {
             </CardContent>
           </Card>
 
+          
           {/* Navigation */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link href="/order-of-service">
@@ -160,16 +151,17 @@ export default function AfterServicePage() {
               </Button>
             </Link>
           </div>
-
         </div>
       </main>
 
+    
       {/* Footer */}
       <footer className="border-t border-border bg-muted mt-16">
         <div className="container mx-auto px-4 py-8 text-center">
+          
           <div className="flex items-center justify-center">
             <div className="flex items-center gap-4">
-              <p className="text-muted-foreground">{"Remembrance Reimagined • The Funeral Book"}</p>
+              <p className="text-muted-foreground">{"With love and remembrance • The Funeral Book"}</p>
               <Image
                 src="/bessie_logo_final.png"
                 alt="The Funeral Book"
@@ -182,12 +174,12 @@ export default function AfterServicePage() {
           <p className="text-xs text-muted-foreground/70 mt-2">
             Created by{" "}
             <a
-              href="https://github.com/Beccins"
+              href="https://github.com/afishydeath"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-muted-foreground transition-colors"
             >
-              Munns Media Pty Ltd
+              Sam Hogan
             </a>
           </p>
         </div>
