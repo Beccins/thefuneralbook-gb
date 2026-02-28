@@ -246,7 +246,7 @@ function InteractiveServiceItem({ item }: { item: ServiceItem }) {
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/https://youtu.be/zmPNVK6RZ4s"
+               src="https://www.youtube.com/embed/zmPNVK6RZ4s"
                 title="Gary's Memorial Video"
                 frameBorder="0"
                 allowFullScreen={true}
