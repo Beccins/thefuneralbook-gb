@@ -26,7 +26,7 @@ import {
   Facebook,
   Instagram,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 interface MediaItem {
