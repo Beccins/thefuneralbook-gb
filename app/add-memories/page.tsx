@@ -705,7 +705,7 @@ export default function AddMemoriesPage() {
           </div>
           <p className="text-xs text-muted-foreground/70 mt-2">
             Created by{" "}
-            <a href="https://github.com/beccins" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
+            <a href="https://thefuneralbook.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
               Munns Media Pty Ltd
             </a>
           </p>
