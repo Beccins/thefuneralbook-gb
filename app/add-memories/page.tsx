@@ -329,7 +329,7 @@ export default function AddMemoriesPage() {
                       id="memory-relationship"
                       value={memoryForm.relationship}
                       onChange={(e) => setMemoryForm((prev) => ({ ...prev, relationship: e.target.value }))}
-                      placeholder="e.g., Daughter, Friend, Neighbor"
+                      placeholder="e.g., Family, Friend, Neighbor, Colleague"
                       className="bg-input border-border"
                     />
                   </div>
