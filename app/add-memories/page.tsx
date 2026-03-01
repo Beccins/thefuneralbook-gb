@@ -51,7 +51,7 @@ interface Memory {
 }
 
 const photos = [
-  { src: "/01_Gary_Young7ish.jpg", caption: "Young Gary" },
+  { src: "/01_Gary_Young_7ish.jpg", caption: "Young Gary" },
   { src: "/02_Gary_11ish_with_family.jpg", caption: "Gary with Family" },
   { src: "/03_Gary_21st_cake.jpg", caption: "Gary's 21st Birthday" },
   { src: "/04_Gary_Gail_WeddingCar.jpg", caption: "Gary & Gail's Wedding" },
