@@ -295,7 +295,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">What should I wear to the service?</h4>
                     <p className="text-muted-foreground text-sm">
-                      Business casual or semi-formal attire is appropriate. Margaret loved bright colors, so please
+                      Business casual or semi-formal attire is appropriate. Bright colors are encouraged, so please
                       don't feel limited to traditional black attire.
                     </p>
                   </div>
