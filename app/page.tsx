@@ -43,7 +43,7 @@ export default function MemorialHomepage() {
               </div>
 
               {/* Memorial Information */}
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-foreground tracking-wide text-balance">Gary Robert Beaumont</h2>
 
                 <div className="text-xl text-muted-foreground space-y-2">
